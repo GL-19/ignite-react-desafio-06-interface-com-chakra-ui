@@ -1,15 +1,22 @@
+import { Heading } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import { Header } from "../../components/Header";
 
-interface ContinentProps {}
+interface ContinentProps {
+	title: string;
+}
 
-function Continent() {
+function Continent({ title }: ContinentProps) {
 	return (
 		<>
 			<Head>
-				<title>Home</title>
+				<title>{title}</title>
 			</Head>
-			<h1>Continent</h1>
+			<>
+				<Header />
+				<Heading>Continent</Heading>
+			</>
 		</>
 	);
 }
@@ -25,8 +32,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<ContinentProps> = async ({ params }) => {
 	// const { name } = params;
+	const name = "teste";
 
 	return {
-		props: {},
+		props: {
+			title: name,
+		},
 	};
 };
