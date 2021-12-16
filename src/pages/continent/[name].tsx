@@ -6,6 +6,13 @@ import { CitiesList } from "../../components/CitiesList";
 import { ContinentBanner } from "../../components/ContinentBanner";
 import { ContinentData } from "../../components/ContinentData";
 import { Header } from "../../components/Header";
+import {
+	africaData,
+	americaData,
+	asiaData,
+	europeData,
+	oceaniaData,
+} from "../../services/fakeApi";
 
 interface CityData {
 	name: string;
@@ -18,9 +25,9 @@ interface ContinentProps {
 	name: string;
 	bannerUrl: string;
 	description: string;
-	countriesQuantatity: string | number;
-	languagesQuantatity: string | number;
-	mostVisitedCitiesQuantatity: string | number;
+	countriesQuantity: string | number;
+	languagesQuantity: string | number;
+	mostVisitedCitiesQuantity: string | number;
 	cities: CityData[];
 }
 
@@ -29,9 +36,9 @@ function Continent({
 	cities,
 	bannerUrl,
 	description,
-	countriesQuantatity,
-	languagesQuantatity,
-	mostVisitedCitiesQuantatity,
+	countriesQuantity,
+	languagesQuantity,
+	mostVisitedCitiesQuantity,
 }: ContinentProps) {
 	return (
 		<>
@@ -51,9 +58,9 @@ function Continent({
 				>
 					<ContinentData
 						description={description}
-						countriesQuantatity={countriesQuantatity}
-						languagesQuantatity={languagesQuantatity}
-						mostVisitedCitiesQuantatity={mostVisitedCitiesQuantatity}
+						countriesQuantity={countriesQuantity}
+						languagesQuantity={languagesQuantity}
+						mostVisitedCitiesQuantity={mostVisitedCitiesQuantity}
 					/>
 
 					<CitiesList cities={cities} />
@@ -65,53 +72,11 @@ function Continent({
 
 export default Continent;
 
-const data: ContinentProps = {
-	name: "Europa",
-	bannerUrl: "/Europa/europe-banner.svg",
-	description: `A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a lesta pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.`,
-	countriesQuantatity: 50,
-	languagesQuantatity: 60,
-	mostVisitedCitiesQuantatity: 27,
-	cities: [
-		{
-			name: "Londres",
-			country: "Reino Unido",
-			cityImageUrl: "/Europa/London.svg",
-			countryFlagUrl: "/Europa/uk-flag.png",
-		},
-		{
-			name: "Paris",
-			country: "França",
-			cityImageUrl: "/Europa/Paris.svg",
-			countryFlagUrl: "/Europa/fr-flag.png",
-		},
-		{
-			name: "Roma",
-			country: "Itália",
-			cityImageUrl: "/Europa/Rome.svg",
-			countryFlagUrl: "/Europa/it-flag.png",
-		},
-		{
-			name: "Praga",
-			country: "República Tcheca",
-			cityImageUrl: "/Europa/Prague.svg",
-			countryFlagUrl: "/Europa/czk-flag.png",
-		},
-		{
-			name: "Amsterdã",
-			country: "Holanda",
-			cityImageUrl: "/Europa/Amsterdan.svg",
-			countryFlagUrl: "/Europa/ne-flag.png",
-		},
-	],
-};
-
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
 		paths: [
 			{ params: { name: "africa" } },
-			{ params: { name: "america-do-norte" } },
-			{ params: { name: "america-do-sul" } },
+			{ params: { name: "america" } },
 			{ params: { name: "asia" } },
 			{ params: { name: "europa" } },
 			{ params: { name: "oceania" } },
@@ -122,15 +87,29 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<ContinentProps> = async ({ params }) => {
 	const { name } = params;
-	let found;
+
+	let found = false;
+	let data;
 
 	switch (name) {
+		case "america":
+			data = americaData;
+			found = true;
+			break;
 		case "africa":
-		case "america-do-norte":
-		case "america-do-sul":
+			data = africaData;
+			found = true;
+			break;
 		case "asia":
+			data = asiaData;
+			found = true;
+			break;
 		case "europa":
+			data = europeData;
+			found = true;
+			break;
 		case "oceania":
+			data = oceaniaData;
 			found = true;
 			break;
 		default:

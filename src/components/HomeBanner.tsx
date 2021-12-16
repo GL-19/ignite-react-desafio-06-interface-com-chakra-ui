@@ -9,7 +9,7 @@ export function HomeBanner() {
 					Chegou a hora de você tirar o papel a viagem que você sempre sonhou
 				</Text>
 			</Box>
-			<Image src="Home/Airplane.svg" alt="airplane" />
+			<Image src="Home/Airplane.svg" alt="airplane" display={["none", "block"]} />
 		</Flex>
 	);
 }

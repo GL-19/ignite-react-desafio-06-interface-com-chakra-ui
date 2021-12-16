@@ -1,13 +1,11 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { CarouselElement } from "./CarouselElement";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
-import SwiperCore, { Pagination, Navigation } from "swiper";
-import Link from "next/link";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
@@ -23,117 +21,48 @@ export function HomeCarousel() {
 			onSlideChange={() => console.log("slide change")}
 		>
 			<SwiperSlide>
-				<Link href="/continent/europa">
-					<a>
-						<Flex
-							backgroundImage="Europe.svg"
-							backgroundSize="cover"
-							flexDir="column"
-							align="center"
-							justify="center"
-							w="100%"
-							h="400px"
-						>
-							<Heading>Europa</Heading>
-							<Text>O continente mais antigo</Text>
-						</Flex>
-					</a>
-				</Link>
+				<CarouselElement
+					linkUrl="/continent/europa"
+					imageUrl="/Home/Europe.svg"
+					title="Europa"
+					description="O continente mais antigo"
+				/>
 			</SwiperSlide>
 
 			<SwiperSlide>
-				<Link href="/continent/america-do-norte">
-					<a>
-						<Flex
-							backgroundImage="Europe.svg"
-							backgroundSize="cover"
-							flexDir="column"
-							align="center"
-							justify="center"
-							w="100%"
-							h="400px"
-						>
-							<Heading>América do Norte</Heading>
-							<Text>O continente mais antigo</Text>
-						</Flex>
-					</a>
-				</Link>
+				<CarouselElement
+					linkUrl="/continent/asia"
+					imageUrl="/Home/Europe.svg"
+					title="Ásia"
+					description="O maior continente"
+				/>
 			</SwiperSlide>
 
 			<SwiperSlide>
-				<Link href="/continent/america-do-sul">
-					<a>
-						<Flex
-							backgroundImage="Europe.svg"
-							backgroundSize="cover"
-							flexDir="column"
-							align="center"
-							justify="center"
-							w="100%"
-							h="400px"
-						>
-							<Heading>América do Sul</Heading>
-							<Text>O continente mais antigo</Text>
-						</Flex>
-					</a>
-				</Link>
+				<CarouselElement
+					linkUrl="/continent/africa"
+					imageUrl="/Home/Europe.svg"
+					title="África"
+					description="Berço da humanidade"
+				/>
 			</SwiperSlide>
 
 			<SwiperSlide>
-				<Link href="/continent/asia">
-					<a>
-						<Flex
-							backgroundImage="Europe.svg"
-							backgroundSize="cover"
-							flexDir="column"
-							align="center"
-							justify="center"
-							w="100%"
-							h="400px"
-						>
-							<Heading>Ásia</Heading>
-							<Text>O continente mais antigo</Text>
-						</Flex>
-					</a>
-				</Link>
+				<CarouselElement
+					linkUrl="/continent/oceania"
+					imageUrl="/Home/Europe.svg"
+					title="Oceania"
+					description="O continente mais novo"
+				/>
 			</SwiperSlide>
 
 			<SwiperSlide>
-				<Link href="/continent/africa">
-					<a>
-						<Flex
-							backgroundImage="Europe.svg"
-							backgroundSize="cover"
-							flexDir="column"
-							align="center"
-							justify="center"
-							w="100%"
-							h="400px"
-						>
-							<Heading>África</Heading>
-							<Text>O continente mais antigo</Text>
-						</Flex>
-					</a>
-				</Link>
-			</SwiperSlide>
-
-			<SwiperSlide>
-				<Link href="/continent/oceania">
-					<a>
-						<Flex
-							backgroundImage="Europe.svg"
-							backgroundSize="cover"
-							flexDir="column"
-							align="center"
-							justify="center"
-							w="100%"
-							h="400px"
-						>
-							<Heading>Oceania</Heading>
-							<Text>O continente mais antigo</Text>
-						</Flex>
-					</a>
-				</Link>
+				<CarouselElement
+					linkUrl="/continent/america"
+					imageUrl="/Home/Europe.svg"
+					title="América"
+					description="Novo Mundo"
+				/>
 			</SwiperSlide>
 		</Swiper>
 	);

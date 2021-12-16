@@ -2,16 +2,16 @@ import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 
 interface ContinentDataProps {
 	description: string;
-	countriesQuantatity: string | number;
-	languagesQuantatity: string | number;
-	mostVisitedCitiesQuantatity: string | number;
+	countriesQuantity: string | number;
+	languagesQuantity: string | number;
+	mostVisitedCitiesQuantity: string | number;
 }
 
 export function ContinentData({
 	description,
-	countriesQuantatity,
-	languagesQuantatity,
-	mostVisitedCitiesQuantatity,
+	countriesQuantity,
+	languagesQuantity,
+	mostVisitedCitiesQuantity,
 }: ContinentDataProps) {
 	return (
 		<Grid gridTemplateColumns="repeat(auto-fit, minmax(325px, 1fr))" gap={["1rem", "0"]}>
@@ -25,19 +25,19 @@ export function ContinentData({
 			>
 				<Box>
 					<Heading color="yellow.400" fontSize={["24px", "48px"]} fontWeight="semibold">
-						{countriesQuantatity}
+						{countriesQuantity}
 					</Heading>
 					<Text fontSize={["18px", "24px"]}>países</Text>
 				</Box>
 				<Box>
 					<Heading color="yellow.400" fontSize={["24px", "48px"]} fontWeight="semibold">
-						{languagesQuantatity}
+						{languagesQuantity}
 					</Heading>
 					<Text fontSize={["18px", "24px"]}>línguas</Text>
 				</Box>
 				<Box>
 					<Heading color="yellow.400" fontSize={["24px", "48px"]} fontWeight="semibold">
-						{mostVisitedCitiesQuantatity}
+						{mostVisitedCitiesQuantity}
 					</Heading>
 					<Text fontSize={["18px", "24px"]}>cidades +100</Text>
 				</Box>
