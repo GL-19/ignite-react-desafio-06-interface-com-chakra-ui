@@ -27,10 +27,12 @@ export function CitiesList({ cities }: CitiesListProps) {
 							w="256px"
 							h="279px"
 							flexDir="column"
-							borderRadius="1rem"
+							borderRadius="0.5rem"
 							key={city.name}
+							overflow="hidden"
 						>
-							<Image src={city.cityImageUrl} alt="city-photo" w="100%" h="173px" />
+							<Image src={city.cityImageUrl} alt="city-photo" w="100%" minH="173px" />
+
 							<Flex
 								justify="space-between"
 								align="center"
@@ -47,6 +49,7 @@ export function CitiesList({ cities }: CitiesListProps) {
 									</Text>
 									<Text>{city.country}</Text>
 								</Box>
+
 								<Image
 									src={city.countryFlagUrl}
 									alt="country-flag"

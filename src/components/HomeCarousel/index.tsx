@@ -32,7 +32,7 @@ export function HomeCarousel() {
 			<SwiperSlide>
 				<CarouselElement
 					linkUrl="/continent/asia"
-					imageUrl="/Home/Europe.svg"
+					imageUrl="/Home/Asia.jpg"
 					title="Ásia"
 					description="O maior continente"
 				/>
@@ -41,7 +41,7 @@ export function HomeCarousel() {
 			<SwiperSlide>
 				<CarouselElement
 					linkUrl="/continent/africa"
-					imageUrl="/Home/Europe.svg"
+					imageUrl="/Home/Africa.jpg"
 					title="África"
 					description="Berço da humanidade"
 				/>
@@ -50,7 +50,7 @@ export function HomeCarousel() {
 			<SwiperSlide>
 				<CarouselElement
 					linkUrl="/continent/oceania"
-					imageUrl="/Home/Europe.svg"
+					imageUrl="/Home/Oceania.jpg"
 					title="Oceania"
 					description="O continente mais novo"
 				/>
@@ -59,7 +59,7 @@ export function HomeCarousel() {
 			<SwiperSlide>
 				<CarouselElement
 					linkUrl="/continent/america"
-					imageUrl="/Home/Europe.svg"
+					imageUrl="/Home/America.jpg"
 					title="América"
 					description="Novo Mundo"
 				/>
