@@ -15,21 +15,36 @@ export function CarouselElement({
 	linkUrl,
 }: CarouselElementProps) {
 	return (
-		<Link href={linkUrl}>
-			<a>
-				<Flex
-					backgroundImage={imageUrl}
-					backgroundSize="cover"
-					flexDir="column"
-					align="center"
-					justify="center"
-					w="100%"
-					h="400px"
-				>
-					<Heading color="white">{title}</Heading>
-					<Text color="white">{description}</Text>
-				</Flex>
-			</a>
-		</Link>
+		<Flex
+			backgroundImage={imageUrl}
+			backgroundSize="cover"
+			flexDir="column"
+			align="center"
+			justify="center"
+			w="100%"
+			h={["250px", "375px", "400px"]}
+		>
+			<Link href={linkUrl}>
+				<a>
+					<Heading
+						textAlign="center"
+						color="gray.50"
+						fontSize={["24px", "36px", "48px"]}
+						fontWeight="bolder"
+						mb={["0.4rem", "0.8rem", "1.2rem"]}
+					>
+						{title}
+					</Heading>
+					<Text
+						color="gray.100"
+						textAlign="center"
+						fontSize={["14px", "19px", "24px"]}
+						fontWeight="bolder"
+					>
+						{description}
+					</Text>
+				</a>
+			</Link>
+		</Flex>
 	);
 }

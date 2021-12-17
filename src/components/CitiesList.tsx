@@ -14,7 +14,14 @@ interface CitiesListProps {
 export function CitiesList({ cities }: CitiesListProps) {
 	return (
 		<Box>
-			<Heading mb={["1.25rem", "2.5rem"]}>Cidades +100</Heading>
+			<Heading
+				mb={["1.25rem", "2.5rem"]}
+				color="gray.600"
+				fontSize="36px"
+				fontWeight="medium"
+			>
+				Cidades +100
+			</Heading>
 			<Grid
 				justifyItems="center"
 				alignItems="center"
@@ -44,10 +51,17 @@ export function CitiesList({ cities }: CitiesListProps) {
 								borderBottomRadius="0.5rem"
 							>
 								<Box>
-									<Text fontSize="20px" fontWeight="semibold">
+									<Text
+										fontSize="20px"
+										fontWeight="semibold"
+										color="gray.600"
+										fontFamily="Barrow"
+									>
 										{city.name}
 									</Text>
-									<Text>{city.country}</Text>
+									<Text color="gray.500" fontFamily="Barrow">
+										{city.country}
+									</Text>
 								</Box>
 
 								<Image
