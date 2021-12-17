@@ -124,7 +124,7 @@ export const americaData = {
 
 export const oceaniaData = {
 	name: "Oceania",
-	bannerUrl: "/Oceania/Oceania.svg",
+	bannerUrl: "/Oceania/Oceania.jpg",
 	description:
 		"A Oceania é uma região geográfica composta por vários grupos de ilhas do oceano Pacífico (Polinésia, Melanésia e Micronésia). O termo Oceania foi criado em 1831 pelo explorador francês Dumont d'Urville. O termo é usado hoje em vários idiomas para designar uma região geográfica e política que compreende o continente da Austrália e ilhas do Oceano Pacífico adjacentes.Os limites da Oceania são definidos de várias maneiras. A maioria das definições reconhecem partes da Australásia como a Austrália, Nova Zelândia e Nova Guiné, e parte do Arquipélago Malaio como sendo partes da Oceania.",
 	countriesQuantity: 14,

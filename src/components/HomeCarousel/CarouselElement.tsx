@@ -18,6 +18,7 @@ export function CarouselElement({
 		<Flex
 			backgroundImage={imageUrl}
 			backgroundSize="cover"
+			opacity={0.9}
 			flexDir="column"
 			align="center"
 			justify="center"

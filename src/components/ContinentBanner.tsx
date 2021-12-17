@@ -12,13 +12,13 @@ export function ContinentBanner({ name, bannerUrl }: ContinentBannerProps) {
 			backgroundSize="cover"
 			backgroundRepeat="no-repeat"
 			w="100%"
-			h={["150px", "500px"]}
+			h={["150px", "325px", "500px"]}
 			align={["center", "end"]}
 			justify={["center", "left"]}
-			px={["0", "8rem"]}
-			py={["0", "4rem"]}
+			px={["0", "4rem", "8rem"]}
+			py={["0", "2rem", "4rem"]}
 		>
-			<Heading color="white" fontWeight="semibold" fontSize={["28px", "48px"]}>
+			<Heading color="white" fontWeight="semibold" fontSize={["28px", "38px", "48px"]}>
 				{name}
 			</Heading>
 		</Flex>

@@ -17,19 +17,20 @@ const Home: NextPage = () => {
 				<Header />
 
 				<HomeBanner />
+				<Box mb="2rem">
+					<TripsInfo />
 
-				<TripsInfo />
+					<Box textAlign="center" color="gray.700" my={["1.5rem", "2.25rem", "3rem"]}>
+						<Heading fontSize={["20px", "28px", "36px"]} fontWeight="medium">
+							Vamos nessa?
+						</Heading>
+						<Heading fontSize={["20px", "28px", "36px"]} fontWeight="medium">
+							Então escolha seu continente
+						</Heading>
+					</Box>
 
-				<Box textAlign="center" color="gray.700" my={["1.5rem", "2.25rem", "3rem"]}>
-					<Heading fontSize={["20px", "28px", "36px"]} fontWeight="medium">
-						Vamos nessa?
-					</Heading>
-					<Heading fontSize={["20px", "28px", "36px"]} fontWeight="medium">
-						Então escolha seu continente
-					</Heading>
+					<HomeCarousel />
 				</Box>
-
-				<HomeCarousel />
 			</>
 		</>
 	);

@@ -51,10 +51,10 @@ function Continent({
 				<ContinentBanner name={name} bannerUrl={bannerUrl} />
 
 				<Flex
-					mx={["1rem", "8.5rem"]}
-					my={["2rem", "4rem"]}
+					mx={["1.5rem", "3.5rem", "8rem"]}
+					my={["2rem", "3rem", "4rem"]}
 					flexDir="column"
-					gap={["2rem", "5rem"]}
+					gap={["2rem", "3.5rem", "5rem"]}
 				>
 					<ContinentData
 						description={description}
