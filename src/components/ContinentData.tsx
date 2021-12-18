@@ -25,7 +25,7 @@ export function ContinentData({
 			>
 				<Box>
 					<Heading
-						color="yellow.400"
+						color="yellow.500"
 						fontSize={["24px", "36px", "48px"]}
 						fontWeight="semibold"
 					>
@@ -35,7 +35,7 @@ export function ContinentData({
 				</Box>
 				<Box>
 					<Heading
-						color="yellow.400"
+						color="yellow.500"
 						fontSize={["24px", "36px", "48px"]}
 						fontWeight="semibold"
 					>
@@ -45,7 +45,7 @@ export function ContinentData({
 				</Box>
 				<Box>
 					<Heading
-						color="yellow.400"
+						color="yellow.500"
 						fontSize={["24px", "36px", "48px"]}
 						fontWeight="semibold"
 					>

@@ -18,7 +18,7 @@ export function ContinentBanner({ name, bannerUrl }: ContinentBannerProps) {
 			px={["0", "4rem", "8rem"]}
 			py={["0", "2rem", "4rem"]}
 		>
-			<Heading color="white" fontWeight="semibold" fontSize={["28px", "38px", "48px"]}>
+			<Heading color="gray.50" fontWeight="semibold" fontSize={["28px", "38px", "48px"]}>
 				{name}
 			</Heading>
 		</Flex>

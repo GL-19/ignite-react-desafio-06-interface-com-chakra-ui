@@ -1,6 +1,6 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 import { Header } from "../components/Header";
 import { HomeCarousel } from "../components/HomeCarousel";
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 				<Box mb="2rem">
 					<TripsInfo />
 
-					<Box textAlign="center" color="gray.700" my={["1.5rem", "2.25rem", "3rem"]}>
+					<Box textAlign="center" color="gray.600" my={["1.5rem", "2.25rem", "3rem"]}>
 						<Heading fontSize={["20px", "28px", "36px"]} fontWeight="medium">
 							Vamos nessa?
 						</Heading>

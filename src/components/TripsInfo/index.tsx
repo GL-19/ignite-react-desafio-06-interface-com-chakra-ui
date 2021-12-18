@@ -9,6 +9,7 @@ export function TripsInfo() {
 				gridTemplateColumns={["1fr 1fr", "repeat(auto-fit, minmax(50px, 1fr))"]}
 				gridTemplateRows={["1fr 1fr 1fr", "1fr"]}
 				py={["1.5rem", "3.5rem", "5rem"]}
+				mx={["0", "0", "0.4rem"]}
 			>
 				<TripsInfoElement imageUrl="/Home/cocktail.png">vida noturna</TripsInfoElement>
 				<TripsInfoElement imageUrl="Home/surf.png">praia</TripsInfoElement>

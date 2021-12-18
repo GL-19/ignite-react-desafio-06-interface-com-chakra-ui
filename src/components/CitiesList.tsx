@@ -17,7 +17,7 @@ export function CitiesList({ cities }: CitiesListProps) {
 			<Heading
 				mb={["1.25rem", "2.5rem"]}
 				color="gray.600"
-				fontSize="36px"
+				fontSize={["24px", "30px", "36px"]}
 				fontWeight="medium"
 			>
 				Cidades +100
@@ -37,6 +37,7 @@ export function CitiesList({ cities }: CitiesListProps) {
 							borderRadius="0.5rem"
 							key={city.name}
 							overflow="hidden"
+							bg="white"
 						>
 							<Image src={city.cityImageUrl} alt="city-photo" w="100%" minH="173px" />
 
