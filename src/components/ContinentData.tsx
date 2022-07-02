@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Text, Image } from "@chakra-ui/react";
 
 interface ContinentDataProps {
 	description: string;
@@ -51,7 +51,9 @@ export function ContinentData({
 					>
 						{mostVisitedCitiesQuantity}
 					</Heading>
-					<Text fontSize={["18px", "21px", "24px"]}>cidades +100</Text>
+					<Text fontSize={["18px", "21px", "24px"]}>
+						cidades +100 <Image display="inline" src="/Info.png" alt="info" />
+					</Text>
 				</Box>
 			</Flex>
 		</Grid>

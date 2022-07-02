@@ -1,4 +1,4 @@
-import { Flex, Image, Text, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Flex, Image, Text } from "@chakra-ui/react";
 
 interface TripsInfoElementProps {
 	imageUrl: string;

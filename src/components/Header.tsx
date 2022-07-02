@@ -7,7 +7,7 @@ export function Header() {
 			<Link href="/">
 				<a>
 					<Image
-						src="/logo.svg"
+						src="/Logo.svg"
 						alt="logo"
 						w={["82px", "133px", "184px"]}
 						h={["20px", "33px", "46px"]}

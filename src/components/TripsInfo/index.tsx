@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import { TripsInfoElement } from "./TripsInfoElement";
 
 export function TripsInfo() {
